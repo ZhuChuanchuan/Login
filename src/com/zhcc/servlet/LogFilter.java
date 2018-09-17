@@ -8,7 +8,7 @@ import java.io.IOException;
 /**
  * Create by ZHCC on 2018/9/17
  */
-@WebFilter(filterName = "LogFilter",urlPatterns = {"/*"})  //拦截所有请求
+@WebFilter(filterName = "LogFilter")  //拦截所有请求
 public class LogFilter implements Filter {
 
     private FilterConfig config;

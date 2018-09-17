@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Create by ZHCC on 2018/9/17
  */
-@WebFilter(filterName = "AuthorityFilter",urlPatterns = {"/*"},initParams = {
+@WebFilter(filterName = "AuthorityFilter",initParams = {
         @WebInitParam(name="encoding",value="GBK"),
         @WebInitParam(name="loginPage",value="/index.jsp")
 })
