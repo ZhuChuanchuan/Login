@@ -21,6 +21,9 @@ public class GetFileServlet extends HttpServlet {
         part.getContentType();//文件类型
         part.getSize();//文件大小
         String fileNameInfo=part.getHeader("content-disposition");//包含原始字符串文件名信息
+
+        String filename=""; // =fileNameInfo.substring
+        part.write(getServletContext().getRealPath("/uploadFiles")+"/"+filename);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
