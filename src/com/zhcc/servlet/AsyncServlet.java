@@ -1,5 +1,7 @@
 package com.zhcc.servlet;
 
+import com.zhcc.listener.MyAsyncListener;
+
 import javax.servlet.AsyncContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
@@ -28,6 +30,7 @@ public class AsyncServlet extends HttpServlet {
         out.println("进入servlet的时间：" + new java.util.Date() + " </br>");
         //异步调用
         AsyncContext actx=request.startAsync();
+        actx.addListener(new MyAsyncListener());
         actx.setTimeout(60 * 1000);
         actx.start(new GetBookTarget(actx));
     }
